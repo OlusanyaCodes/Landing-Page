@@ -25,27 +25,40 @@ body{
     /* border:3px solid red; */
 }
 
+
+
 .header:hover{
     background-color: #51A3A3e3;
     transition: 0.5s ease;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/*=======================Changes============================*/
+/* Floats are considered bad practice now */
 .left{
-    float: left;
+    /* float: left; */
     padding: 15px;
     padding-left: 25px;
 }
 
 .right{
-    float: right;
+    /* float: right; */
     padding: 18px;
     padding-right: 25px;
     /* border:3px solid red; */
 }
 
-.header *{
+/*=======================Changes============================*/
+/* Redundant styles */
+
+/* .header *{
     display: inline-block;
-}
+} */
 
 .header h1{
     color: #DCE0D9;
@@ -221,13 +234,17 @@ hr{
 .footer-content div{
     transition: 0.5s ease;
 }
-
+/*=======================Changes============================*/
+/* Use grids instead of floats */
 .footer-content{
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    column-count: 3;
-    column-gap: 75px;
+    /* column-count: 3;
+    column-gap: 75px; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 75px;
     padding-bottom: 30px;
     column-rule: 1px solid #7F8384;
 }
@@ -238,7 +255,7 @@ hr{
     text-align: justify;
 }
 
-.footer-about{
+/* .footer-about{
     float: left;
 }
 
@@ -248,7 +265,7 @@ hr{
 
 .footer-navigate{
     float: right;
-}
+} */
 
 .footer-lines{
     width: 40px;
